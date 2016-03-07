@@ -1,0 +1,40 @@
+// @import "yoga";
+// @import "normalize";
+
+// $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+// @import "font-awesome";
+
+$gutter: 0.4rem;
+
+$brand-grey: #ddd;
+$nav-text: darken($brand-grey, 50%);
+$brand-border: 0.2rem solid #5100c9;
+
+@import 'box-sizing';
+@import 'base';
+@import 'grid';
+
+.top-nav {
+  background: $brand-grey;
+
+  color: $nav-text;
+}
+
+.top-left-nav {
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 $gutter;
+  padding: 0.6rem 0;
+
+  &.active {
+    border-bottom: $brand-border;
+  }
+
+  &__icon {
+    width: 2em;
+
+    vertical-align: middle;
+  }
+}
