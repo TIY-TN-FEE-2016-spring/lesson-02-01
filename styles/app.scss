@@ -1,14 +1,15 @@
 // @import "yoga";
 // @import "normalize";
 
-// $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
-// @import "font-awesome";
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 
 $gutter: 0.4rem;
 
 $brand-grey: #ddd;
 $nav-text: darken($brand-grey, 50%);
-$brand-border: 0.2rem solid #5100c9;
+$brand-border-size: 0.2rem solid;
+$brand-border: #{$brand-border-size} #5100c9;
 
 @import 'box-sizing';
 @import 'base';
@@ -27,8 +28,9 @@ $brand-border: 0.2rem solid #5100c9;
 .nav-item {
   margin: 0 $gutter;
   padding: 0.6rem 0;
+  border-bottom: $brand-border-size transparent;
 
-  &.active {
+  &:hover {
     border-bottom: $brand-border;
   }
 
@@ -37,4 +39,8 @@ $brand-border: 0.2rem solid #5100c9;
 
     vertical-align: middle;
   }
+}
+
+@media (min-width: 461px) and (max-width: 960px) {
+  @import 'navbar/mobile';
 }
